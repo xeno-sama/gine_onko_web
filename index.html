@@ -1,0 +1,403 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Cervi Tracker — Cervical Cancer Monitoring</title>
+  <meta name="description" content="A focused tracking app for cervical cancer treatment. Monitor blood tests, imaging, and treatment cycles. Generate structured reports for physician visits.">
+  <meta property="og:title" content="Cervi Tracker — Cervical Cancer Monitoring">
+  <meta property="og:description" content="Keep treatment, blood tests, and imaging organized. See trends clearly. Prepare better for follow-up visits.">
+  <meta property="og:type" content="website">
+  <link rel="icon" type="image/jpeg" href="images/icon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+
+  <!-- ========== HEADER ========== -->
+  <header class="site-header" id="site-header">
+    <div class="container header-inner">
+      <a href="#" class="logo" aria-label="Cervi Tracker home">
+        <img src="images/icon.jpg" alt="Cervi Tracker icon" class="logo-icon" width="40" height="40">
+        <span class="logo-text">Cervi Tracker</span>
+      </a>
+      <!-- lang-toggle hidden — auto-detection works, manual switch not needed for now
+      <div class="lang-toggle" id="lang-toggle" role="group" aria-label="Language selector">
+        <button class="lang-opt active" data-lang="en" aria-label="English">EN</button>
+        <button class="lang-opt" data-lang="ru" aria-label="Русский">RU</button>
+      </div>
+      -->
+      <a href="https://xeno-sama.github.io/gine_onko_tracker/" class="btn btn-primary btn-sm header-cta" target="_blank" rel="noopener" data-i18n="nav.open-app">Open App</a>
+      <button class="nav-toggle" id="nav-toggle" aria-label="Toggle navigation" aria-expanded="false">
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+        <span class="nav-toggle-bar"></span>
+      </button>
+    </div>
+  </header>
+
+  <!-- Mobile nav overlay — lives outside header to avoid backdrop-filter stacking context issue -->
+  <nav class="main-nav" id="main-nav" aria-label="Main navigation">
+    <ul class="nav-list">
+      <li><a href="#features" class="nav-link" data-i18n="nav.features">Features</a></li>
+      <li><a href="#how-it-works" class="nav-link" data-i18n="nav.how">How it works</a></li>
+      <li><a href="#reports" class="nav-link" data-i18n="nav.reports">Reports</a></li>
+      <li><a href="#about" class="nav-link" data-i18n="nav.about">About</a></li>
+    </ul>
+  </nav>
+
+  <main>
+
+    <!-- ========== 1. HERO ========== -->
+    <section class="hero" id="hero">
+      <div class="hero-bg">
+        <div class="hero-orb hero-orb--1"></div>
+        <div class="hero-orb hero-orb--2"></div>
+        <div class="hero-orb hero-orb--3"></div>
+      </div>
+      <div class="container hero-inner">
+        <div class="hero-content">
+          <h1 class="hero-title"><span data-i18n="hero.title">Cervical cancer monitoring,</span><br><span class="hero-accent" data-i18n="hero.accent">clearer and more structured</span></h1>
+          <p class="hero-subtitle" data-i18n="hero.subtitle">Keep treatment, blood tests, and imaging organized in one focused system. See trends clearly. Bring structured reports to your next physician visit.</p>
+          <div class="hero-actions">
+            <a href="https://xeno-sama.github.io/gine_onko_tracker/" class="btn btn-primary btn-lg" target="_blank" rel="noopener" data-i18n="hero.cta-primary">Open App</a>
+            <a href="#features" class="btn btn-outline btn-lg" data-i18n="hero.cta-secondary">Learn more</a>
+          </div>
+        </div>
+        <div class="hero-visual">
+          <div class="phone-frame">
+            <img src="images/overview.jpg" alt="Cervi Tracker overview screen showing cycle outcome, imaging trend, and current active treatment cycle" loading="eager" width="500" height="1060">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 2. THE PROBLEM ========== -->
+    <section class="section section--problem" id="problem">
+      <div class="container">
+        <div class="section-header anim-fade-up">
+          <h2 class="section-title" data-i18n="problem.heading">Tracking treatment shouldn't be this hard</h2>
+          <p class="section-subtitle" data-i18n="problem.subheading">For many patients going through cervical cancer treatment, staying on top of everything can feel overwhelming.</p>
+        </div>
+        <div class="problem-grid">
+          <div class="glass-card problem-card anim-fade-up">
+            <div class="problem-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="16" y1="13" x2="8" y2="13"/><line x1="16" y1="17" x2="8" y2="17"/></svg>
+            </div>
+            <h3 data-i18n="problem.1.title">Scattered records</h3>
+            <p data-i18n="problem.1.body">Test results live in phone photos, hospital portals, paper printouts, and messaging apps. Finding what you need takes time.</p>
+          </div>
+          <div class="glass-card problem-card anim-fade-up">
+            <div class="problem-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><polyline points="22 12 18 12 15 21 9 3 6 12 2 12"/></svg>
+            </div>
+            <h3 data-i18n="problem.2.title">Hard to see trends</h3>
+            <p data-i18n="problem.2.body">When blood tests, imaging results, and treatment events live in separate places, understanding progress over time is genuinely difficult.</p>
+          </div>
+          <div class="glass-card problem-card anim-fade-up">
+            <div class="problem-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+            </div>
+            <h3 data-i18n="problem.3.title">Difficult follow-up visits</h3>
+            <p data-i18n="problem.3.body">Explaining months of treatment history to a physician in a short appointment, from memory or scattered notes, rarely goes well.</p>
+          </div>
+          <div class="glass-card problem-card anim-fade-up">
+            <div class="problem-icon">
+              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="3" width="7" height="7"/><rect x="14" y="3" width="7" height="7"/><rect x="14" y="14" width="7" height="7"/><rect x="3" y="14" width="7" height="7"/></svg>
+            </div>
+            <h3 data-i18n="problem.4.title">Disconnected data</h3>
+            <p data-i18n="problem.4.body">Blood markers, imaging studies, and treatments are often recorded independently — making it hard to see how they relate to each other.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 3. THE SOLUTION ========== -->
+    <section class="section section--solution" id="features">
+      <div class="container">
+        <div class="section-header anim-fade-up">
+          <h2 class="section-title" data-i18n="solution.heading">One focused system for your treatment course</h2>
+          <p class="section-subtitle" data-i18n="solution.subheading">Cervi Tracker organizes your treatment journey in one place — so you can see what's happening, notice trends, and prepare for conversations with your physician.</p>
+        </div>
+        <div class="solution-grid">
+          <div class="glass-card solution-card anim-fade-up">
+            <div class="solution-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 20h9"/><path d="M16.5 3.5a2.121 2.121 0 0 1 3 3L7 19l-4 1 1-4L16.5 3.5z"/></svg>
+            </div>
+            <h3 data-i18n="solution.1.title">Track consistently</h3>
+            <p data-i18n="solution.1.body">Blood tests, imaging studies, and treatment events — all in one structured timeline. No more switching between apps and folders.</p>
+          </div>
+          <div class="glass-card solution-card anim-fade-up">
+            <div class="solution-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><line x1="18" y1="20" x2="18" y2="10"/><line x1="12" y1="20" x2="12" y2="4"/><line x1="6" y1="20" x2="6" y2="14"/></svg>
+            </div>
+            <h3 data-i18n="solution.2.title">See trends clearly</h3>
+            <p data-i18n="solution.2.body">Zoned blood charts, imaging volumes over time, cycle-based comparisons. The app is built to help you notice changes as they happen.</p>
+          </div>
+          <div class="glass-card solution-card anim-fade-up">
+            <div class="solution-icon">
+              <svg width="36" height="36" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M14 2H6a2 2 0 0 0-2 2v16a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V8z"/><polyline points="14 2 14 8 20 8"/><line x1="12" y1="18" x2="12" y2="12"/><line x1="9" y1="15" x2="15" y2="15"/></svg>
+            </div>
+            <h3 data-i18n="solution.3.title">Communicate better</h3>
+            <p data-i18n="solution.3.body">Generate structured reports that summarize treatment history, blood trends, and imaging dynamics — ready for your next physician visit.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 4. HOW IT WORKS ========== -->
+    <section class="section section--features" id="how-it-works">
+      <div class="container">
+        <div class="section-header anim-fade-up">
+          <h2 class="section-title" data-i18n="features.heading">Five screens, one clear picture</h2>
+          <p class="section-subtitle" data-i18n="features.subheading">Each area of the app is designed around a specific part of the treatment monitoring workflow.</p>
+        </div>
+
+        <!-- Feature: Overview -->
+        <div class="feature-row anim-fade-up">
+          <div class="feature-text">
+            <div class="feature-label" data-i18n="features.overview.label">Overview</div>
+            <h3 class="feature-title" data-i18n="features.overview.title">Your treatment status at a glance</h3>
+            <p data-i18n="features.overview.body">The Overview screen brings together what matters most: your current treatment cycle, the outcome of the last completed cycle, and the latest imaging trend. It's the signal-first center of the app — designed to answer "how is it going?" without making you dig through data.</p>
+          </div>
+          <div class="feature-visual">
+            <div class="phone-frame phone-frame--sm">
+              <img src="images/overview.jpg" alt="Overview screen showing current cycle 16, cycle 13 outcome with improved trend, and imaging trend chart showing tumor volume decrease" loading="lazy" width="500" height="1060">
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature: Blood -->
+        <div class="feature-row feature-row--reverse anim-fade-up">
+          <div class="feature-text">
+            <div class="feature-label" data-i18n="features.blood.label">Blood</div>
+            <h3 class="feature-title" data-i18n="features.blood.title">Key biomarkers, tracked over time</h3>
+            <p data-i18n="features.blood.body">Log blood test results and see how key markers trend across treatment cycles. The zoned chart shows at a glance which values are within range, elevated, or low — so you can have more informed conversations with your care team.</p>
+          </div>
+          <div class="feature-visual">
+            <div class="phone-frame phone-frame--sm">
+              <img src="images/blood.jpg" alt="Blood trend screen showing HGB, PLT, ANC, CRE, AST, ALT biomarker zones over time with individual test result cards" loading="lazy" width="500" height="1060">
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature: Imaging -->
+        <div class="feature-row anim-fade-up">
+          <div class="feature-text">
+            <div class="feature-label" data-i18n="features.imaging.label">Imaging</div>
+            <h3 class="feature-title" data-i18n="features.imaging.title">Tumor dynamics, visible at a glance</h3>
+            <p data-i18n="features.imaging.body">Track ultrasound, MRI, and CT results in one unified timeline. The imaging screen charts tumor volume over time and shows how each study compares to the last — making it easier to understand the direction of change.</p>
+          </div>
+          <div class="feature-visual">
+            <div class="phone-frame phone-frame--sm">
+              <img src="images/imaging.jpg" alt="Imaging trend screen showing tumor volume chart over time with 2D/3D toggle and detailed study cards with measurements" loading="lazy" width="500" height="1060">
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature: Treatment -->
+        <div class="feature-row feature-row--reverse anim-fade-up">
+          <div class="feature-text">
+            <div class="feature-label" data-i18n="features.treatment.label">Treatment</div>
+            <h3 class="feature-title" data-i18n="features.treatment.title">Your treatment course, structured and readable</h3>
+            <p data-i18n="features.treatment.body">Every doctor visit, chemotherapy session, radiotherapy, surgery, and supportive procedure is recorded in a structured timeline. Events are linked to treatment cycles, so the full course of treatment stays clear and organized.</p>
+          </div>
+          <div class="feature-visual">
+            <div class="phone-frame phone-frame--sm">
+              <img src="images/treatment.jpg" alt="Treatment timeline showing chronological list of doctor visits, chemotherapy sessions, blood tests, and imaging studies linked to treatment cycles" loading="lazy" width="500" height="1060">
+            </div>
+          </div>
+        </div>
+
+        <!-- Feature: Reports -->
+        <div class="feature-row anim-fade-up">
+          <div class="feature-text">
+            <div class="feature-label" data-i18n="features.reports.label">Reports</div>
+            <h3 class="feature-title" data-i18n="features.reports.title">Structured summaries, ready when you need them</h3>
+            <p data-i18n="features.reports.body">The Hub gives you access to printable physician reports: a general summary with treatment timeline, a blood test report, and tumor dynamics charts. Generate them before your next visit and bring a clear, organized picture to the conversation.</p>
+          </div>
+          <div class="feature-visual">
+            <div class="phone-frame phone-frame--sm">
+              <img src="images/hub.jpg" alt="Hub screen showing Settings, Profile, and Reports section with General summary, Blood tests report, and Tumor dynamics report options" loading="lazy" width="500" height="1060">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 5. SIGNAL-FIRST OVERVIEW ========== -->
+    <section class="section section--signal" id="signal">
+      <div class="container">
+        <div class="signal-inner anim-fade-up">
+          <div class="signal-content">
+            <h2 class="section-title" data-i18n="signal.heading">Built around what matters right now</h2>
+            <p data-i18n="signal.intro">The Overview screen doesn't try to show everything at once. It focuses on three questions:</p>
+            <div class="signal-list">
+              <div class="signal-item">
+                <div class="signal-dot signal-dot--active"></div>
+                <div>
+                  <strong data-i18n="signal.1.title">Current active cycle</strong>
+                  <span data-i18n="signal.1.body">Which treatment cycle is running and when it started</span>
+                </div>
+              </div>
+              <div class="signal-item">
+                <div class="signal-dot signal-dot--outcome"></div>
+                <div>
+                  <strong data-i18n="signal.2.title">Cycle outcome</strong>
+                  <span data-i18n="signal.2.body">How the last completed cycle compared to the one before it — across imaging, blood, and treatment</span>
+                </div>
+              </div>
+              <div class="signal-item">
+                <div class="signal-dot signal-dot--trend"></div>
+                <div>
+                  <strong data-i18n="signal.3.title">Latest imaging trend</strong>
+                  <span data-i18n="signal.3.body">The most recent direction of the primary tumor metric — increasing, decreasing, or stable</span>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 6. BLOOD + IMAGING + TREATMENT ========== -->
+    <section class="section section--connected" id="connected">
+      <div class="container">
+        <div class="section-header anim-fade-up">
+          <h2 class="section-title" data-i18n="connected.heading">Blood, imaging, and treatment — connected by time</h2>
+          <p class="section-subtitle" data-i18n="connected.subheading">Most health apps treat records as isolated entries. Cervi Tracker organizes them around treatment cycles and timelines, so you can see how blood results, imaging findings, and treatment events relate to each other over the course of your care.</p>
+        </div>
+        <div class="connected-visuals anim-fade-up">
+          <div class="phone-frame phone-frame--sm">
+            <img src="images/blood.jpg" alt="Blood trend screen with zoned biomarker chart" loading="lazy" width="500" height="1060">
+          </div>
+          <div class="phone-frame phone-frame--sm">
+            <img src="images/imaging.jpg" alt="Imaging trend screen with tumor volume chart" loading="lazy" width="500" height="1060">
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 7. REPORTS ========== -->
+    <section class="section section--reports" id="reports">
+      <div class="container">
+        <div class="reports-inner anim-fade-up">
+          <div class="reports-content">
+            <h2 class="section-title" data-i18n="reports.heading">Clearer conversations with your physician</h2>
+            <p data-i18n="reports.intro">One of the hardest parts of follow-up care is explaining what's happened since the last visit. Cervi Tracker helps by generating structured, printable reports that organize your treatment journey clearly.</p>
+            <ul class="reports-list">
+              <li>
+                <strong data-i18n="reports.1.title">General summary</strong>
+                <span data-i18n="reports.1.body">Treatment timeline, blood parameters, and imaging results — organized by cycle</span>
+              </li>
+              <li>
+                <strong data-i18n="reports.2.title">Blood tests report</strong>
+                <span data-i18n="reports.2.body">A compact table of up to 12 cycles of key biomarkers with reference ranges</span>
+              </li>
+              <li>
+                <strong data-i18n="reports.3.title">Tumor dynamics</strong>
+                <span data-i18n="reports.3.body">Volume or size trend chart with detailed per-study measurements and percentage changes</span>
+              </li>
+            </ul>
+            <p class="reports-note" data-i18n="reports.note">Reports are generated locally on your device — your data stays with you.</p>
+          </div>
+          <div class="reports-visual">
+            <div class="report-frame">
+              <img src="images/report.jpg" alt="Physician summary report showing treatment timeline table with cycles, treatment regimen, blood parameters, and tumor sizes organized chronologically" loading="lazy" width="667" height="1050">
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 8. WHY CERVICAL-FOCUSED ========== -->
+    <section class="section section--why" id="about">
+      <div class="container">
+        <div class="why-inner anim-fade-up">
+          <h2 class="section-title" data-i18n="why.heading">Purpose-built, not generic</h2>
+          <p class="section-subtitle" data-i18n="why.subheading">Cervi Tracker is not a general symptom diary or a generic health journal. It's designed specifically around the cervical cancer monitoring workflow — because a focused tool is more useful than a flexible one.</p>
+          <div class="why-grid">
+            <div class="glass-card why-card">
+              <h3 data-i18n="why.1.title">Cervical-first logic</h3>
+              <p data-i18n="why.1.body">Imaging metrics, tumor size tracking, and signal evaluation are tailored for cervical cancer specifically.</p>
+            </div>
+            <div class="glass-card why-card">
+              <h3 data-i18n="why.2.title">Cycle-based structure</h3>
+              <p data-i18n="why.2.body">Data is organized around treatment cycles — the natural rhythm of cervical cancer care — not arbitrary dates.</p>
+            </div>
+            <div class="glass-card why-card">
+              <h3 data-i18n="why.3.title">Treatment-aware tracking</h3>
+              <p data-i18n="why.3.body">New cycles start from treatment decisions, not random entries. The app understands your treatment course structure.</p>
+            </div>
+            <div class="glass-card why-card">
+              <h3 data-i18n="why.4.title">Reports that match the workflow</h3>
+              <p data-i18n="why.4.body">Physician summaries are structured around cycles, imaging dynamics, and blood trends — the things doctors actually look at.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 9. TRUST / SAFETY ========== -->
+    <section class="section section--trust" id="trust">
+      <div class="container">
+        <div class="trust-inner anim-fade-up">
+          <h2 class="section-title" data-i18n="trust.heading">Important to know</h2>
+          <div class="trust-content">
+            <div class="trust-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s8-4 8-10V5l-8-3-8 3v7c0 6 8 10 8 10z"/></svg>
+              <p data-i18n="trust.1">Cervi Tracker is a monitoring and tracking tool. It does not provide medical advice, diagnoses, or treatment recommendations.</p>
+            </div>
+            <div class="trust-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M17 21v-2a4 4 0 0 0-4-4H5a4 4 0 0 0-4 4v2"/><circle cx="9" cy="7" r="4"/><path d="M23 21v-2a4 4 0 0 0-3-3.87"/><path d="M16 3.13a4 4 0 0 1 0 7.75"/></svg>
+              <p data-i18n="trust.2">Treatment decisions must always be made in consultation with qualified clinicians. This app supports tracking and structured review, not clinical judgment.</p>
+            </div>
+            <div class="trust-item">
+              <svg width="24" height="24" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><rect x="3" y="11" width="18" height="11" rx="2" ry="2"/><path d="M7 11V7a5 5 0 0 1 10 0v4"/></svg>
+              <p data-i18n="trust.3">Your data is private. Reports are generated locally on your device. The app does not share your medical information with third parties.</p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ========== 10. FINAL CTA ========== -->
+    <section class="section section--cta" id="cta">
+      <div class="cta-bg">
+        <div class="cta-orb cta-orb--1"></div>
+        <div class="cta-orb cta-orb--2"></div>
+      </div>
+      <div class="container">
+        <div class="cta-inner anim-fade-up">
+          <h2 class="section-title cta-title" data-i18n="cta.heading">Start organizing your treatment course</h2>
+          <p class="cta-subtitle" data-i18n="cta.sub">Free to use. No credit card required.</p>
+          <a href="https://xeno-sama.github.io/gine_onko_tracker/" class="btn btn-primary btn-lg" target="_blank" rel="noopener" data-i18n="cta.btn">Open Cervi Tracker</a>
+        </div>
+      </div>
+    </section>
+
+  </main>
+
+  <!-- ========== FOOTER ========== -->
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/icon.jpg" alt="Cervi Tracker" class="footer-icon" width="32" height="32">
+        <span class="footer-name">Cervi Tracker</span>
+        <span class="footer-tagline" data-i18n="footer.tagline">Focused cervical cancer monitoring</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="privacy.html" data-i18n="footer.privacy">Privacy Policy</a>
+        <a href="terms.html" data-i18n="footer.terms">Terms of Use</a>
+        <a href="support.html" data-i18n="footer.contact">Contact</a>
+      </nav>
+      <p class="footer-copy" data-i18n="footer.copy">&copy; 2026 Cervi Tracker. All rights reserved.</p>
+    </div>
+  </footer>
+
+  <script src="js/i18n.js"></script>
+  <script src="js/main.js"></script>
+</body>
+</html>

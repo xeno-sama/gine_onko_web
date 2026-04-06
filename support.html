@@ -1,0 +1,190 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Support | Cervi Tracker</title>
+  <meta name="description" content="Support and contact information for Cervi Tracker — cervical cancer monitoring app.">
+  <link rel="icon" type="image/jpeg" href="images/icon.jpg">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="css/style.css">
+  <style>
+    .support-wrap {
+      padding-top: calc(var(--header-h) + var(--sp-xl));
+      padding-bottom: var(--sp-2xl);
+      min-height: 100vh;
+    }
+    .support-wrap .container {
+      max-width: 760px;
+    }
+    .support-wrap h1 {
+      font-size: var(--fs-3xl);
+      font-weight: var(--fw-bold);
+      color: var(--c-dark);
+      letter-spacing: -0.02em;
+      margin-bottom: var(--sp-sm);
+    }
+    .support-wrap > .container > p {
+      font-size: var(--fs-lg);
+      color: var(--c-text-muted);
+      line-height: var(--lh-body);
+      margin-bottom: var(--sp-xl);
+    }
+    .support-email-block {
+      margin: var(--sp-lg) 0;
+    }
+    .email-card {
+      display: inline-flex;
+      align-items: center;
+      gap: 0.75rem;
+      background: var(--c-bg-glass-strong);
+      border: 1px solid var(--c-sage-200);
+      border-radius: var(--r-lg);
+      padding: var(--sp-md) var(--sp-lg);
+      text-decoration: none;
+      color: var(--c-primary-dark);
+      font-weight: var(--fw-semibold);
+      font-size: var(--fs-lg);
+      transition: all var(--t-normal) var(--ease);
+      box-shadow: var(--shadow-sm);
+    }
+    .email-card svg {
+      color: var(--c-primary);
+      flex-shrink: 0;
+    }
+    .email-card:hover {
+      background: var(--c-primary-subtle);
+      border-color: var(--c-primary);
+      transform: translateY(-2px);
+      box-shadow: var(--shadow-md);
+      color: var(--c-primary-dark);
+    }
+    .support-section {
+      margin-top: var(--sp-xl);
+    }
+    .support-section h2 {
+      font-size: var(--fs-xl);
+      font-weight: var(--fw-semibold);
+      color: var(--c-dark);
+      margin-bottom: var(--sp-md);
+    }
+    .faq-list {
+      display: flex;
+      flex-direction: column;
+      gap: var(--sp-sm);
+    }
+    .faq-item {
+      padding: var(--sp-md);
+      background: var(--c-sage-50);
+      border: 1px solid var(--c-sage-200);
+      border-radius: var(--r-md);
+    }
+    .faq-item strong {
+      display: block;
+      font-size: var(--fs-base);
+      font-weight: var(--fw-semibold);
+      color: var(--c-dark);
+      margin-bottom: var(--sp-xs);
+    }
+    .faq-item p {
+      font-size: var(--fs-sm);
+      color: var(--c-text-muted);
+      line-height: var(--lh-body);
+      margin: 0;
+    }
+    .faq-item a {
+      color: var(--c-primary);
+      text-decoration: underline;
+      text-underline-offset: 2px;
+    }
+  </style>
+</head>
+<body>
+
+  <header class="site-header scrolled" id="site-header">
+    <div class="container header-inner">
+      <a href="index.html" class="logo" aria-label="Cervi Tracker home">
+        <img src="images/icon.jpg" alt="Cervi Tracker icon" class="logo-icon" width="40" height="40">
+        <span class="logo-text">Cervi Tracker</span>
+      </a>
+      <nav class="main-nav" aria-label="Main navigation">
+        <ul class="nav-list">
+          <li><a href="index.html" class="nav-link">Home</a></li>
+          <li><a href="support.html" class="nav-link">Support</a></li>
+        </ul>
+      </nav>
+      <a href="https://xeno-sama.github.io/gine_onko_tracker/" class="btn btn-primary btn-sm header-cta" target="_blank" rel="noopener">Open App</a>
+    </div>
+  </header>
+
+  <main class="support-wrap">
+    <div class="container">
+      <h1>Support</h1>
+      <p>Have a question about Cervi Tracker? We're happy to help. Reach out directly by email — we aim to respond within a few business days.</p>
+
+      <div class="support-email-block">
+        <a href="mailto:astrodiary.dar@gmail.com" class="email-card">
+          <svg width="22" height="22" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="1.5" stroke-linecap="round" stroke-linejoin="round"><path d="M4 4h16c1.1 0 2 .9 2 2v12c0 1.1-.9 2-2 2H4c-1.1 0-2-.9-2-2V6c0-1.1.9-2 2-2z"/><polyline points="22,6 12,13 2,6"/></svg>
+          astrodiary.dar@gmail.com
+        </a>
+      </div>
+
+      <div class="support-section">
+        <h2>Common Questions</h2>
+        <div class="faq-list">
+
+          <div class="faq-item">
+            <strong>How do I start using Cervi Tracker?</strong>
+            <p>Open the app at <a href="https://xeno-sama.github.io/gine_onko_tracker/" target="_blank" rel="noopener">the web app link</a>, create an account with your email, and complete the brief onboarding to set up your profile. After that, you can begin logging blood tests, imaging studies, and treatment events.</p>
+          </div>
+
+          <div class="faq-item">
+            <strong>Is my medical data private?</strong>
+            <p>Yes. Your data is stored securely and is never shared with third parties. PDF reports are generated locally on your device. See our <a href="privacy.html">Privacy Policy</a> for full details.</p>
+          </div>
+
+          <div class="faq-item">
+            <strong>How do I generate a physician report?</strong>
+            <p>Navigate to the Hub tab in the app. You'll find three report options: General Summary, Blood Tests Report, and Tumor Dynamics. Tap the one you want to preview and print it directly from the app.</p>
+          </div>
+
+          <div class="faq-item">
+            <strong>Can Cervi Tracker give me medical advice?</strong>
+            <p>No. Cervi Tracker is a personal monitoring and tracking tool only. It does not provide medical advice, diagnoses, or treatment recommendations. All clinical decisions must be made with a qualified healthcare professional. See our <a href="terms.html">Terms of Use</a> for more information.</p>
+          </div>
+
+          <div class="faq-item">
+            <strong>How do I delete my account?</strong>
+            <p>You can delete your account and all associated data from within the app under Settings → Delete Account. This action is permanent and cannot be undone.</p>
+          </div>
+
+          <div class="faq-item">
+            <strong>Something isn't working or I found a bug</strong>
+            <p>Please email us at <a href="mailto:astrodiary.dar@gmail.com">astrodiary.dar@gmail.com</a> with a brief description of the issue. We appreciate your feedback and will look into it as soon as possible.</p>
+          </div>
+
+        </div>
+      </div>
+    </div>
+  </main>
+
+  <footer class="site-footer">
+    <div class="container footer-inner">
+      <div class="footer-brand">
+        <img src="images/icon.jpg" alt="Cervi Tracker" class="footer-icon" width="32" height="32">
+        <span class="footer-name">Cervi Tracker</span>
+        <span class="footer-tagline">Focused cervical cancer monitoring</span>
+      </div>
+      <nav class="footer-nav" aria-label="Footer navigation">
+        <a href="privacy.html">Privacy Policy</a>
+        <a href="terms.html">Terms of Use</a>
+        <a href="support.html">Support</a>
+      </nav>
+      <p class="footer-copy">&copy; 2026 Cervi Tracker. All rights reserved.</p>
+    </div>
+  </footer>
+
+</body>
+</html>
