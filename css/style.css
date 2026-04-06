@@ -299,15 +299,28 @@ ul, ol { list-style: none; }
   letter-spacing: -0.01em;
 }
 
+/* Desktop: nav is a fixed transparent bar aligned with the header.
+   pointer-events:none lets clicks pass through to the header underneath;
+   only nav-list items are interactive. */
 .main-nav {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  height: var(--header-h);
   display: flex;
   align-items: center;
+  justify-content: center;
+  z-index: 1001;
+  pointer-events: none;
+  background: none;
 }
 
 .nav-list {
   display: flex;
   align-items: center;
   gap: var(--sp-lg);
+  pointer-events: auto;
 }
 
 .nav-link {
@@ -1108,10 +1121,15 @@ ul, ol { list-style: none; }
     display: none;
   }
 
+  /* Mobile: override desktop fixed-bar to full-screen overlay */
   .main-nav {
     display: none;
     position: fixed;
-    inset: 0;
+    top: 0;
+    left: 0;
+    right: 0;
+    bottom: 0;
+    height: auto;          /* override desktop header-height */
     background: rgba(246, 249, 248, 0.97);
     backdrop-filter: blur(16px);
     -webkit-backdrop-filter: blur(16px);
@@ -1119,6 +1137,7 @@ ul, ol { list-style: none; }
     flex-direction: column;
     align-items: center;
     justify-content: center;
+    pointer-events: auto;  /* restore clicks for overlay */
   }
 
   .main-nav.open {
@@ -1128,6 +1147,7 @@ ul, ol { list-style: none; }
   .main-nav.open .nav-list {
     flex-direction: column;
     gap: var(--sp-lg);
+    pointer-events: auto;
   }
 
   .main-nav.open .nav-link {
