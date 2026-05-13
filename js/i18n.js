@@ -19,13 +19,15 @@
       'nav.how': 'How it works',
       'nav.reports': 'Reports',
       'nav.about': 'About',
-      'nav.open-app': 'Open App',
+      'nav.open-ios': 'iOS App',
+      'nav.open-web': 'WEB',
 
       /* --- hero --- */
       'hero.title': 'Cervical cancer monitoring,',
       'hero.accent': 'clearer and more structured',
       'hero.subtitle': 'Keep treatment, blood tests, and imaging organized in one focused system. See trends clearly. Bring structured reports to your next physician visit.',
-      'hero.cta-primary': 'Open App',
+      'hero.cta-ios': 'Open on iPhone / iPad',
+      'hero.cta-web': 'Open Web Version',
       'hero.cta-secondary': 'Learn more',
 
       /* --- problem --- */
@@ -115,7 +117,8 @@
       /* --- cta --- */
       'cta.heading': 'Start organizing your treatment course',
       'cta.sub': 'Free to use. No credit card required.',
-      'cta.btn': 'Open Cervi Tracker',
+      'cta.ios': 'Download iOS App',
+      'cta.web': 'Open Web Version',
 
       /* --- footer --- */
       'footer.tagline': 'Focused cervical cancer monitoring',
@@ -213,7 +216,7 @@
       'policy.support.p1': 'Have a question about Cervi Tracker? We\'re happy to help. Reach out directly by email — we aim to respond within a few business days.',
       'policy.support.h2': 'Common Questions',
       'policy.support.q1': 'How do I start using Cervi Tracker?',
-      'policy.support.a1': 'Open the app at <a href="https://xeno-sama.github.io/gine_onko_tracker/" target="_blank" rel="noopener">the web app link</a>, create an account with your email, and complete the brief onboarding to set up your profile. After that, you can begin logging blood tests, imaging studies, and treatment events.',
+      'policy.support.a1': 'Open Cervi Tracker on the App Store for iPhone and iPad, or use the <a href="https://xeno-sama.github.io/gine_onko_tracker/" target="_blank" rel="noopener">web app</a> on other devices. Then create an account with your email and complete the brief onboarding to set up your profile.',
       'policy.support.q2': 'Is my medical data private?',
       'policy.support.a2': 'Yes. Your data is stored securely and is never shared with third parties. PDF reports are generated locally on your device. See our <a href="privacy.html">Privacy Policy</a> for full details.',
       'policy.support.q3': 'How do I generate a physician report?',
@@ -236,13 +239,15 @@
       'nav.how': 'Как работает',
       'nav.reports': 'Отчёты',
       'nav.about': 'О приложении',
-      'nav.open-app': 'Открыть',
+      'nav.open-ios': 'iOS App',
+      'nav.open-web': 'WEB',
 
       /* --- hero --- */
       'hero.title': 'Мониторинг рака шейки матки —',
       'hero.accent': 'чётко и структурированно',
       'hero.subtitle': 'Лечение, анализы крови и визуализация — всё в одной системе. Следите за динамикой. Приходите к врачу подготовленными.',
-      'hero.cta-primary': 'Открыть приложение',
+      'hero.cta-ios': 'Открыть на iPhone / iPad',
+      'hero.cta-web': 'Открыть веб-версию',
       'hero.cta-secondary': 'Подробнее',
 
       /* --- problem --- */
@@ -332,7 +337,8 @@
       /* --- cta --- */
       'cta.heading': 'Начните вести структурированный учёт лечения',
       'cta.sub': 'Бесплатно. Без банковской карты.',
-      'cta.btn': 'Открыть Cervi Tracker',
+      'cta.ios': 'Скачать iOS-приложение',
+      'cta.web': 'Открыть веб-версию',
 
       /* --- footer --- */
       'footer.tagline': 'Мониторинг рака шейки матки',
@@ -430,7 +436,7 @@
       'policy.support.p1': 'У вас есть вопросы о Cervi Tracker? Мы будем рады помочь. Напишите нам на email — мы стараемся отвечать в течение пары рабочих дней.',
       'policy.support.h2': 'Частые вопросы',
       'policy.support.q1': 'Как начать использовать Cervi Tracker?',
-      'policy.support.a1': 'Откройте <a href="https://xeno-sama.github.io/gine_onko_tracker/" target="_blank" rel="noopener">веб-приложение</a>, создайте аккаунт с помощью email и пройдите быстрый онбординг. После этого вы сможете начать записывать анализы, снимки и лечение.',
+      'policy.support.a1': 'Откройте Cervi Tracker в App Store на iPhone или iPad, а на других устройствах используйте <a href="https://xeno-sama.github.io/gine_onko_tracker/" target="_blank" rel="noopener">веб-приложение</a>. Затем создайте аккаунт по email и пройдите короткий онбординг.',
       'policy.support.q2': 'Мои медицинские данные приватны?',
       'policy.support.a2': 'Да. Ваши данные надёжно хранятся и не передаются третьим лицам. PDF-отчёты создаются локально. Подробнее в <a href="privacy.html">Политике конфиденциальности</a>.',
       'policy.support.q3': 'Как создать отчёт для врача?',
